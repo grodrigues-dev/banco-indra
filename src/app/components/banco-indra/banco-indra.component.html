@@ -1,7 +1,23 @@
 <header class="color-pri-bg color-light-fg p-1">
     <img src="assets/dinheiro.svg" style="height: 50px;" alt="">
 </header>
-<div class="banner-background" style="height: 20rem;">
+<div class="banner-background pb-5">
+    <div class="ml-3 pt-5">
+        <p class="h3 color-light-fg font-weight-bold">Bem vindo ao banco Indra!</p>
+        <p class="h4 color-light-fg">Evite filas, ganhe tempo, vem pra Indra :)</p>
+        <p class="h5 color-light-fg">Acesse sua conta:</p>
+        <form [formGroup]="formLogin" class="d-flex flex-column responsivo-form">
+            <input type="text" inputMode="numeric" formControlName="agencia" placeholder="agência" #agencia
+                maxLength="15" (input)="validaCampoTipoNumero(agencia)" class="p-1">
+            <input type="text" formControlName="conta" placeholder="conta" #conta maxLength="15"
+                (input)="validaCampoTipoNumero(conta)" class="mt-2 p-1">
+            <div class="d-flex flex-column align-items-center">
+                <button class="btn-pri mt-3" (click)="validarConta()">Acessar</button>
+                <p class="h5 color-light-fg text-center">ou</p>
+                <button class="btn-sec">Cadastre-se</button>
+            </div>
+        </form>
+    </div>
 </div>
 <div class="color-pri-bg p-1 grid-cards">
     <div class="d-flex flex-column justify-content-center align-items-center text-center mt-2 mb-2">
