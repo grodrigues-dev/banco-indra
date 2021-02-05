@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { timeMasks } from 'ngx-mask';
 
 
 @Component({
@@ -14,6 +16,7 @@ export class CadastroComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -22,7 +25,7 @@ export class CadastroComponent implements OnInit {
 
   private iniciarForm(): void {
     this.formCadastro = this.fb.group({
-      nome: [null, Validators.required],
+      nome: [null, Validators.minLength(3)],
       cpf: [null, Validators.required],
       celular: [null, Validators.required],
       email: [null, Validators.required],
@@ -30,7 +33,7 @@ export class CadastroComponent implements OnInit {
       senha: [null, Validators.required],
       confirmarSenha: [null, Validators.required],
       termosAceitos: [null, Validators.requiredTrue],
-      receberEmail: [null],
+      receberEmail: [null, ''],
     })
   }
 
@@ -40,6 +43,11 @@ export class CadastroComponent implements OnInit {
     } else {
       this.errMsg = ''
     }
+  }
+
+
+  submeterFormulario() {
+    this.router.navigate([''])
   }
 
 }

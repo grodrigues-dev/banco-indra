@@ -22,7 +22,7 @@
     </div>
     <div class="responsivo-form mt-2">
         <label for="">Senha</label>
-        <input type="password" formControlName="senha" class=""> 
+        <input type="password" formControlName="senha" class="">
     </div>
     <div class="responsivo-form mt-2">
         <label for="">Confirmar Senha</label>
@@ -33,5 +33,6 @@
         <input type="checkbox" formControlName="termosAceitos" class="mr-2">
         <label for="ml-2">Declaro que li e aceito os termos</label>
     </div>
-    <button class="btn-pri" [disabled]="!formCadastro.valid || errMsg">Enviar</button>
+    <button class="btn-pri" [ngClass]="{'btn-disabled': !formCadastro.valid || errMsg}"
+        [disabled]="!formCadastro.valid || errMsg" (click)="submeterFormulario()">Enviar</button>
 </form>
