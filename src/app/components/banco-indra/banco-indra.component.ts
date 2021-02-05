@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Cliente } from 'src/app/models/cliente';
 
 @Component({
   selector: 'app-banco-indra',
@@ -11,6 +12,7 @@ export class BancoIndraComponent implements OnInit {
 
   public text = '';
   public formLogin: FormGroup;
+  errMsg = '';
 
   constructor(
     private fb: FormBuilder,
@@ -42,11 +44,6 @@ export class BancoIndraComponent implements OnInit {
     })
   }
 
-  validarConta(): void {
-    console.log(this.formLogin.get('agencia').value, this.formLogin.get('conta').value);
-    
-  }
-
   public validaCampoTipoNumero(input: HTMLFormElement): void {
     const regex = /[^\d]+/g;
     if (input.value.length > input.maxLength) {
@@ -56,6 +53,15 @@ export class BancoIndraComponent implements OnInit {
   }
 
   realizarLogin(): void {
+    const clienteCadastrado: Cliente = JSON.parse(localStorage.getItem('cliente')); 
+    if(clienteCadastrado === null) {
+      this.errMsg = '* dados da conta não encontrados, por favor realizer seu cadastro';
+      return;
+    }
+    if(clienteCadastrado.agencia !=this.formLogin.get('agencia').value || clienteCadastrado.conta != this.formLogin.get('conta').value) {
+      this.errMsg = '* usuario ou senha inválidos';
+      return;
+    }
     this.router.navigate(['area-logada']);
   }
 
