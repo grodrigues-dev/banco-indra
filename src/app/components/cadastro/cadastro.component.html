@@ -1,0 +1,36 @@
+<h2 class="text-center">Bem vindo ao Banco Indra, faça aqui o seu cadastro!</h2>
+<form [formGroup]="formCadastro" class="d-flex align-items-center flex-column">
+    <div class="responsivo-form mt-2">
+        <label for="">Nome</label>
+        <input type="text" formControlName="nome" class="">
+    </div>
+    <div class="responsivo-form mt-2">
+        <label for="">CPF</label>
+        <input type="text" formControlName="cpf" class="">
+    </div>
+    <div class="responsivo-form mt-2">
+        <label for="">celular</label>
+        <input type="text" formControlName="celular" class="">
+    </div>
+    <div class="responsivo-form mt-2">
+        <label for="">e-mail</label>
+        <input type="text" formControlName="email" class="">
+    </div>
+    <div class="responsivo-form mt-2">
+        <label for="">data de nascimento</label>
+        <input type="date" formControlName="dataNascimento" class="">
+    </div>
+    <div class="responsivo-form mt-2">
+        <label for="">Senha</label>
+        <input type="text" formControlName="senha" class=""> 
+    </div>
+    <div class="responsivo-form mt-2">
+        <label for="">Confirmar Senha</label>
+        <input type="text" formControlName="confirmarSenha" class="">
+    </div>
+    <div class="mt-2 mb-2">
+        <input type="checkbox" formControlName="termosAceitos" class="mr-2">
+        <label for="ml-2">Declaro que li e aceito os termos</label>
+    </div>
+    <button class="btn-pri">Enviar</button>
+</form>

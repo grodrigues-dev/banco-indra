@@ -6,11 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BancoIndraComponent } from './components/banco-indra/banco-indra.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CadastroComponent } from './components/cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
-    BancoIndraComponent
+    BancoIndraComponent, CadastroComponent
   ],
   imports: [
     BrowserModule,
