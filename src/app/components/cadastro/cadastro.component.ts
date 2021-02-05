@@ -10,6 +10,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class CadastroComponent implements OnInit {
 
   public formCadastro: FormGroup;
+  errMsg = '';
 
   constructor(
     private fb: FormBuilder,
@@ -31,6 +32,14 @@ export class CadastroComponent implements OnInit {
       termosAceitos: [null, Validators.requiredTrue],
       receberEmail: [null],
     })
+  }
+
+  validarSenhas(): void {
+    if(this.formCadastro.get('senha').value != this.formCadastro.get('confirmarSenha').value) {
+      this.errMsg = 'As senhas não correspondem';
+    } else {
+      this.errMsg = ''
+    }
   }
 
 }

@@ -6,15 +6,15 @@
     </div>
     <div class="responsivo-form mt-2">
         <label for="">CPF</label>
-        <input type="text" formControlName="cpf" class="">
+        <input type="text" formControlName="cpf" class="" mask="000.000.000-00" placeholder="000.000.000-00">
     </div>
     <div class="responsivo-form mt-2">
         <label for="">celular</label>
-        <input type="text" formControlName="celular" class="">
+        <input type="text" formControlName="celular" class="" mask="(00) 00000-0000" placeholder="(00) 00000-0000">
     </div>
     <div class="responsivo-form mt-2">
         <label for="">e-mail</label>
-        <input type="text" formControlName="email" class="">
+        <input type="email" formControlName="email" class="">
     </div>
     <div class="responsivo-form mt-2">
         <label for="">data de nascimento</label>
@@ -22,15 +22,16 @@
     </div>
     <div class="responsivo-form mt-2">
         <label for="">Senha</label>
-        <input type="text" formControlName="senha" class=""> 
+        <input type="password" formControlName="senha" class=""> 
     </div>
     <div class="responsivo-form mt-2">
         <label for="">Confirmar Senha</label>
-        <input type="text" formControlName="confirmarSenha" class="">
+        <input type="password" (blur)="validarSenhas()" formControlName="confirmarSenha" class="">
     </div>
+    <p class="text-danger m-0" *ngIf="errMsg">{{errMsg}}</p>
     <div class="mt-2 mb-2">
         <input type="checkbox" formControlName="termosAceitos" class="mr-2">
         <label for="ml-2">Declaro que li e aceito os termos</label>
     </div>
-    <button class="btn-pri">Enviar</button>
+    <button class="btn-pri" [disabled]="!formCadastro.valid || errMsg">Enviar</button>
 </form>
