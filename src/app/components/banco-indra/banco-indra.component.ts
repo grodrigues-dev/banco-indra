@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-banco-indra',
@@ -13,6 +14,7 @@ export class BancoIndraComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -51,6 +53,14 @@ export class BancoIndraComponent implements OnInit {
       input.value = input.value.slice(0, input.maxLength);
     }
     input.value = input.value.replace(regex, '');
+  }
+
+  realizarLogin(): void {
+    this.router.navigate(['area-logada']);
+  }
+
+  cadastrar(): void {
+    this.router.navigate(['cadastro']);
   }
 
 }

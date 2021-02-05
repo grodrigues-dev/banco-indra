@@ -12,9 +12,9 @@
             <input type="text" formControlName="conta" placeholder="conta" #conta maxLength="15"
                 (input)="validaCampoTipoNumero(conta)" class="mt-2 p-1">
             <div class="d-flex flex-column align-items-center">
-                <button class="btn-pri mt-3" (click)="validarConta()">Acessar</button>
+                <button class="btn-pri mt-3" (click)="realizarLogin()">Acessar</button>
                 <p class="h5 color-light-fg text-center">ou</p>
-                <button class="btn-sec">Cadastre-se</button>
+                <button class="btn-sec" (click)="cadastrar()">Cadastre-se</button>
             </div>
         </form>
     </div>
