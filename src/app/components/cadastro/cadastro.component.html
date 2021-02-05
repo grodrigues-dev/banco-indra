@@ -34,5 +34,21 @@
         <label for="ml-2">Declaro que li e aceito os termos</label>
     </div>
     <button class="btn-pri" [ngClass]="{'btn-disabled': !formCadastro.valid || errMsg}"
-        [disabled]="!formCadastro.valid || errMsg" (click)="cadastrarCliente()">Enviar</button>
+        [disabled]="!formCadastro.valid || errMsg" (click)="cadastrarCliente(modal)">Enviar</button>
 </form>
+
+
+<!-- Modal de sucesso -->
+<ng-template #modal let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Bem vindo ao banco Indra!</h4>
+    </div>
+    <div class="modal-body">
+        <p>Agora você já pode acessar sua conta, Acesse com as seguintes credenciais: </p>
+        <p>Número da agência: {{cliente.agencia}} </p>
+        <p>Número da conta: {{cliente.conta}} </p>
+    </div>
+    <div class="modal-footer d-flex justify-content-center">
+        <button class="btn-sec " (click)="navegarParaLogin()">Acesse sua conta</button>
+    </div>
+</ng-template>
