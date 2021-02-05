@@ -1,0 +1,13 @@
+.banner-background {
+    background-image: url('../../../assets/img01.jpg');
+    background-size: 100%;
+    background-position: center;    
+}
+
+.grid-cards {
+    @media (min-width: 900px) { 
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+

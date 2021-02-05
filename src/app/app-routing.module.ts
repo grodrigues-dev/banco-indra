@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { BancoIndraComponent } from './components/banco-indra/banco-indra.component';
+
+const routes: Routes = [
+  { path: '', component: BancoIndraComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

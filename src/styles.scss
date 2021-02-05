@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+
+//Cores background
+.color-pri-bg {
+    background-color: #241f24;
+}
+
+.color-sec-bg { 
+    background-color: #FF5A5F;
+}
+
+.color-light-bg {
+    background-color: #fff
+}
+
+.color-dark-bg {
+    background-color: #000
+}
+
+//cores de texto
+.color-pri-fg {
+    color: #241f24;
+}
+
+.color-light-fg {
+    color: #fff
+}
+
+.color-sec-fg { 
+    color: #FF5A5F;
+}
+
+.color-dark-fg {
+    color: #000
+}
+
