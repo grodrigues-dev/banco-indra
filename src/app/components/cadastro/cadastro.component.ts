@@ -74,4 +74,8 @@ export class CadastroComponent implements OnInit {
     this.router.navigate(['']);
   }
 
+  voltar(): void {
+    this.router.navigate(['']);
+  }
+
 }

@@ -62,6 +62,7 @@ export class BancoIndraComponent implements OnInit {
       this.errMsg = '* usuario ou senha inválidos';
       return;
     }
+    localStorage.setItem('usuarioLogado', 'true');
     this.router.navigate(['area-logada']);
   }
 

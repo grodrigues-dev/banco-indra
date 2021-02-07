@@ -1,4 +1,7 @@
-<h2 class="text-center">Bem vindo ao Banco Indra, faça aqui o seu cadastro!</h2>
+<div class="d-flex align-items-center justify-content-center mt-2 cursor-pointer">
+    <img src="assets/arrow.svg" style="height: 30px; cursor: pointer;" alt="" (click)="voltar()">
+    <h2 class="text-center ml-3">Bem vindo ao Banco Indra, faça aqui o seu cadastro!</h2>
+</div>
 <form [formGroup]="formCadastro" class="d-flex align-items-center flex-column">
     <div class="responsivo-form mt-2">
         <label for="">Nome</label>
