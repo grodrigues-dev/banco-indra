@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  exibirMenuMobile = true;
+  exibirMenuMobile = false;
   constructor() { }
 
   ngOnInit(): void {

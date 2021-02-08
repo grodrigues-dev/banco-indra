@@ -1,5 +1,23 @@
 <app-header></app-header>
-<div class="d-flex align-items-center justify-content-center mt-2 cursor-pointer">
-    <h2 class="text-center">Bem vindo {{cliente.nome}} você está na área logada!</h2>
+<div class="d-flex align-items-center justify-content-end mt-2 mr-3 cursor-pointer">
+    <p class="m-0">Olá, {{cliente.nome}}</p>
     <img src="assets/logout.svg"  class="ml-3" style="height: 30px; cursor: pointer;" alt="" (click)="sair()">
+</div>
+<div class="d-flex flex-column container-fatura ml-2 mr-2">
+    <div class="d-flex">
+        <img src="assets/credit-card.svg"  class="mb-0" style="height: 25px; cursor: pointer;" alt="" (click)="sair()">
+        <p class="ml-2">{{cliente.nome}} ●●●● 9082</p>
+    </div>
+    <p class="m-0">Limite disponível: </p>
+    <h2>R$ 7.247,84</h2>
+    <div class="barra-de-credito grid-barra-de-credito resp-mt-5 resp-mr-5" [ngClass]="{'resp-element-loading' : elementLoading}">
+        <div class="color-sec-bg borda-esquerda"></div>
+        <div class="color-grey-bg borda-direita"></div>
+        <p></p>
+        <p class="h6">Limite total de R$ 12.0000,00</p>
+    </div>
+    <h4 class="mt-4">Últimos lançamentos:</h4>
+    <div class="mt-2">
+
+    </div>
 </div>
