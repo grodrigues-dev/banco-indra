@@ -9,11 +9,15 @@ import { BancoIndraComponent } from './components/banco-indra/banco-indra.compon
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { AreaLogadaComponent } from './components/area-logada/area-logada.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
-    BancoIndraComponent, CadastroComponent, AreaLogadaComponent
+    BancoIndraComponent,
+    CadastroComponent,
+    AreaLogadaComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

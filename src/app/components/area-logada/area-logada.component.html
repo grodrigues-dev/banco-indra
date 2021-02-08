@@ -1,1 +1,5 @@
-<p>area-logada works!</p>
+<app-header></app-header>
+<div class="d-flex align-items-center justify-content-center mt-2 cursor-pointer">
+    <h2 class="text-center">Bem vindo {{cliente.nome}} você está na área logada!</h2>
+    <img src="assets/logout.svg"  class="ml-3" style="height: 30px; cursor: pointer;" alt="" (click)="sair()">
+</div>

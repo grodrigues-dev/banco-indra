@@ -1,0 +1,22 @@
+<header class="color-pri-bg color-light-fg p-1 d-flex justify-content-between">
+    <img src="assets/dinheiro.svg" style="height: 50px;" alt="">
+    <ul class="menu-desk m-0">
+        <li class="ml-2 mr-2">Insititucional</li>
+        <li class="ml-2 mr-2">Produtos</li>
+        <li class="ml-2 mr-2">Pra você</li>
+        <li class="ml-2 mr-2">Cartões</li>
+        <li class="ml-2 mr-2">Pesquisar</li>
+    </ul>
+    <div class="menu-mobile">
+        <img src="assets/menu.svg"  style="height: 40px;" (click)="toggleMenuMobile()"><img>
+    </div>
+</header>
+<div *ngIf="exibirMenuMobile" class="lista-menu-mobile">
+    <ul class="m-0 p-0 d-flex flex-column align-items-center">
+        <li class="p-2 border w-100 text-center font-weight-bold">Insititucional</li>
+        <li class="p-2 border w-100 text-center font-weight-bold">Produtos</li>
+        <li class="p-2 border w-100 text-center font-weight-bold">Pra você</li>
+        <li class="p-2 border w-100 text-center font-weight-bold">Cartões</li>
+        <li class="p-2 border w-100 text-center font-weight-bold">Pesquisar</li>
+    </ul>
+</div>

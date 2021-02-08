@@ -1,0 +1,33 @@
+ul {
+    list-style: none; 
+}
+
+.menu-desk {
+    @media (min-width: 900px) {
+        display: flex;
+    }
+    display: none;
+    li {
+        cursor: pointer;
+    }
+    
+    li:hover {
+        color: #c4c4c4;
+    } 
+}
+
+.menu-mobile {
+    @media (min-width: 900px) {
+        display: none;
+    } 
+
+}
+.lista-menu-mobile {
+    @media (min-width: 900px) {
+        display: none;
+    } 
+    li {
+        background-color: #c4c4c4;
+    }
+
+}

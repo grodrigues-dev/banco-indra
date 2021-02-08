@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Cliente } from 'src/app/models/cliente';
 
 @Component({
   selector: 'app-area-logada',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AreaLogadaComponent implements OnInit {
 
-  constructor() { }
+  cliente: Cliente;
+  constructor(
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
+    this.cliente = JSON.parse(localStorage.getItem('cliente'));
+  }
+
+  sair(): void {
+    localStorage.removeItem('usuarioLogado');
+    this.router.navigate(['']);
   }
 
 }

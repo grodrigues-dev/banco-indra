@@ -63,7 +63,11 @@ export class BancoIndraComponent implements OnInit {
       return;
     }
     localStorage.setItem('usuarioLogado', 'true');
-    this.router.navigate(['area-logada']);
+    this.router.navigate(['area-logada'], {
+      state: {
+       cliente: clienteCadastrado 
+      }
+    });
   }
 
   cadastrar(): void {
