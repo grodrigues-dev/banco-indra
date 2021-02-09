@@ -17,7 +17,15 @@
         <p class="h6">Limite total de R$ 12.0000,00</p>
     </div>
     <h4 class="mt-4">Últimos lançamentos:</h4>
-    <div class="mt-2">
-
+    <div class="mt-2 rounded container-lancamentos p-2" >
+        <div *ngFor="let lancamento of lancamentos" class="mt-2">
+            <p class="m-0 color-sec-fg">{{lancamento.data}}</p>
+            <div *ngFor="let transacao of lancamento.transacoes" class="d-flex align-items-center mt-2">
+                <img src="{{obterIconesLancamento(transacao.tipo)}}" alt="" style="height: 20px;" class="ml-2"> 
+                <p class="ml-2">{{transacao.descricao}}</p>
+                <div class="pontinhos ml-2 mr-2"></div>
+                <p class="ml-2 font-weight-bold color-sec-fg">{{transacao.valor}}</p>
+            </div>
+        </div>
     </div>
 </div>

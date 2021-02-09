@@ -13,45 +13,56 @@ export class AreaLogadaComponent implements OnInit {
 
   mockLancamentos: Lancamento[] = [{
     data: '06/02',
-    lancamentos: [
+    transacoes: [
       {
         descricao: 'Café Jandirense',
         valor: 'R$35,47',
+        tipo: 'alimentacao'
       }, 
       {
         descricao: 'Supermercado Sol',
         valor: 'R$ 229,81 ',
+        tipo: 'supermercado'
       }
     ] 
   }, {
     data: '07/02',
-    lancamentos: [
+    transacoes: [
       {
         descricao: 'Saque caixa rápido',
         valor: 'R$800,00',
+        tipo: 'saque'
       }, 
       {
         descricao: 'Farmácia DrogaLiz',
         valor: 'R$ 32,77 ',
+        tipo: 'saude'
       }
     ] 
   }
  ]
 
   cliente: Cliente;
+  lancamentos: Lancamento[];
   constructor(
     private router: Router
   ) { }
 
   ngOnInit(): void {
     this.cliente = JSON.parse(localStorage.getItem('cliente'));
+    this.lancamentos = this.mockLancamentos;
   }
 
   sair(): void {
     localStorage.removeItem('usuarioLogado');
     this.router.navigate(['']);
   }
+  
 
-  lancamentos: {}
+  obterIconesLancamento(tipo: string): string {
+    return `assets/${tipo}.svg`;
+  }
+
+
 
 }
