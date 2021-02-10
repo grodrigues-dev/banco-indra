@@ -1,8 +1,8 @@
 .barra-de-credito {
     border-radius: 5px;
     @media (min-width: 900px) {  
-        width: 30%;
-    }
+      width: 70%;
+    }  
 }
 
 .grid-barra-de-credito {
@@ -30,7 +30,7 @@
 
 .container-lancamentos {
     @media (min-width: 900px) {  
-        width: 35%;
+        width: 80%;
     }
     box-shadow: 0px 0px 6px rgb(0 0 0 / 65%);
 }

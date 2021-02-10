@@ -43,6 +43,17 @@ export class AreaLogadaComponent implements OnInit {
  ]
 
   cliente: Cliente;
+  dadosFatura = {
+    numeroCartao: 9002,
+    melhorDiaCompra: '10',
+    vencimento: '17', 
+    pagamento: {
+      vencimento: '17/02',
+      minimo: 'R$ 98,70',
+      valor: 'R$ 1470,29'
+    }
+    
+  };
   lancamentos: Lancamento[];
   constructor(
     private router: Router
